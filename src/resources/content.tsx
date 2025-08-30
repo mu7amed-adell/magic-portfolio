@@ -29,7 +29,7 @@ const social: Social = [
   {
     name: "Portfolio",
     icon: "globe",
-    link: "https://ismaiel.vercel.app",
+    link: "https://mai-gilt.vercel.app/about",
   },
   {
     name: "Email",
@@ -49,7 +49,7 @@ const home: Home = {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">AI Healthcare</strong>{" "}
+        <strong className="ml-4">AI Voice Agent</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Latest project
@@ -277,7 +277,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about AI solutions and intelligent systems...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -289,7 +289,7 @@ const work: Work = {
   title: `Projects – ${person.name}`,
   description: `AI and Machine Learning projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/work/projects
-  // All projects will be listed on the /home and /work routes
+  // Projects are listed on the /work route
 };
 
 
