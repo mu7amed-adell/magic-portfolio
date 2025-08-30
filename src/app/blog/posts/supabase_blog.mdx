@@ -1,0 +1,135 @@
+---
+title: "Building AI-Powered Backends with Supabase"
+summary: "Learn how to leverage Supabase's comprehensive backend-as-a-service platform to build scalable AI applications with real-time features and vector search."
+image: "/images/gallery/supabase-ai.jpg"
+publishedAt: "2024-11-03"
+tag: "Backend Development"
+---
+
+## Why Supabase for AI Applications?
+
+Supabase provides everything you need for modern AI applications: PostgreSQL database, real-time subscriptions, edge functions, authentication, and storage. Its vector search capabilities make it particularly powerful for AI use cases involving embeddings and semantic search.
+
+## Setting Up Your AI Project
+
+<CodeBlock
+    marginBottom="16"
+    codes={[
+      {
+        code:
+`import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = 'https://your-project.supabase.co'
+const supabaseKey = 'your-anon-key'
+
+export const supabase = createClient(supabaseUrl, supabaseKey)
+
+// Enable vector extensions
+// Run this SQL in your Supabase SQL editor:
+-- CREATE EXTENSION IF NOT EXISTS vector;`,
+        language: "javascript",
+        label: "Supabase Client Setup"
+      }
+    ]}
+/>
+
+## Vector Embeddings and Semantic Search
+
+One of Supabase's most powerful features for AI applications is native vector support through the pgvector extension. This enables sophisticated semantic search and recommendation systems.
+
+<CodeBlock
+    marginBottom="16"
+    highlight="7-12"
+    codes={[
+      {
+        code:
+`// Store embeddings in your database
+async function storeEmbedding(content, embedding) {
+  const { data, error } = await supabase
+    .from('documents')
+    .insert({
+      content: content,
+      embedding: embedding,
+      created_at: new Date().toISOString()
+    })
+  
+  return { data, error }
+}
+
+// Perform semantic search
+async function semanticSearch(queryEmbedding, matchThreshold = 0.7) {
+  const { data, error } = await supabase
+    .rpc('match_documents', {
+      query_embedding: queryEmbedding,
+      match_threshold: matchThreshold,
+      match_count: 10
+    })
+  
+  return { data, error }
+}`,
+        language: "javascript",
+        label: "Vector Operations with Supabase"
+      }
+    ]}
+/>
+
+## Real-time AI Features
+
+Supabase's real-time capabilities enable live AI interactions, collaborative AI editing, and instant notifications for AI-generated content.
+
+## Edge Functions for AI Processing
+
+Deploy serverless functions at the edge for low-latency AI processing, API integrations, and custom business logic that works seamlessly with your Supabase database.
+
+<CodeBlock
+    marginBottom="16"
+    codes={[
+      {
+        code:
+`// supabase/functions/ai-chat/index.ts
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+
+serve(async (req) => {
+  const { message, userId } = await req.json()
+  
+  // Process with AI (OpenAI, etc.)
+  const aiResponse = await generateResponse(message)
+  
+  // Store conversation in Supabase
+  const supabase = createClient(
+    Deno.env.get('SUPABASE_URL') ?? '',
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
+  )
+  
+  await supabase.from('conversations').insert({
+    user_id: userId,
+    message: message,
+    ai_response: aiResponse
+  })
+  
+  return new Response(JSON.stringify({ response: aiResponse }), {
+    headers: { "Content-Type": "application/json" }
+  })
+})`,
+        language: "typescript",
+        label: "AI Edge Function Example"
+      }
+    ]}
+/>
+
+## Authentication and Security
+
+Supabase handles user authentication out of the box, with Row Level Security (RLS) policies that ensure users can only access their own AI-generated content.
+
+<Feedback
+    icon
+    marginBottom="16"
+    description={<>
+        Always implement proper RLS policies when storing sensitive AI data, and consider using Supabase's built-in rate limiting for API endpoints.
+    </>}
+/>
+
+## Scaling Considerations
+
+Supabase automatically scales to handle growing AI workloads, but consider database indexing strategies for vector searches and implement caching for frequently accessed AI responses to optimize performance.

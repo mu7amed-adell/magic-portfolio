@@ -289,7 +289,7 @@ const work: Work = {
   title: `Projects – ${person.name}`,
   description: `AI and Machine Learning projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/work/projects
-  // Projects are listed on the /work route
+  // All projects will be listed on the /home and /work routes
 };
 
 
