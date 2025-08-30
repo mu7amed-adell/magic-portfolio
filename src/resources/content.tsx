@@ -1,40 +1,35 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Mohammed",
+  lastName: "Adel Ismaiel",
+  name: `Mohammed Adel Ismaiel`,
+  role: "AI Engineer – Data Scientist",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "mohammedadel288@gmail.com",
+  location: "Africa/Cairo", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Arabic"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates about AI, data science, and engineering insights</>,
 };
 
 const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-  },
-  {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/mohammed-adel-622b2020a/",
   },
   {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Portfolio",
+    icon: "globe",
+    link: "https://ismaiel.vercel.app",
   },
   {
     name: "Email",
@@ -49,30 +44,25 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Transforming data into intelligent solutions</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">AI Healthcare</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Latest project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Mohammed, an AI Engineer and Data Scientist from Cairo, Egypt.
+      <br /> I specialize in building intelligent systems, ETL pipelines, and ML solutions 
+      that turn complex data into actionable insights.
     </>
   ),
 };
@@ -90,7 +80,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -98,9 +88,13 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Mohammed is a Cairo-based AI Engineer and Data Scientist with a passion for transforming complex data challenges
+        into intelligent, scalable solutions. His work spans machine learning, natural language processing, 
+        healthcare AI, and the development of data-driven systems that create real-world impact.
+        <br /><br />
+        With expertise in agentic AI frameworks, ETL pipeline architecture, and feature extraction techniques,
+        Mohammed approaches problems with a "figure it out" mindset - combining research, experimentation, 
+        and creative problem-solving to deliver sustainable solutions.
       </>
     ),
   },
@@ -109,41 +103,61 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Data Management Systems",
+        timeframe: "May 2025 - Present",
+        role: "AI Developer - Healthcare Transcription Solutions (Contract)",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Planned end-to-end medical transcription web application (React.js frontend, Flask backend) 
+            for real-time audio consultations targeting <strong>95% accuracy</strong>.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed intelligent medical AI agent with LLMs & NLP to analyze clinical transcripts, 
+            extract medical insights, and automate diagnostic reports (<strong>reduce documentation time by 60%</strong>).
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Data Management Systems",
+        timeframe: "Jul 2023 - Jan 2024",
+        role: "AI Engineer (Full-time)",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Architected ETL pipelines with Apache NiFi, reducing data processing time <strong>by 60%</strong>.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Built real-time analytics dashboards, improving Ministry of Health reporting efficiency <strong>by 40%</strong>.
+          </>,
+          <>
+            Developed <strong>Open-Source Enterprise Data Analytics Solution</strong> (Metabase + NiFi), 
+            boosting daily output <strong>by 66%</strong>.
+          </>,
+          <>
+            Built <strong>Arabic conversational chatbot</strong> with LLMs, delivering multilingual NLP support.
+          </>,
+          <>
+            Implemented <strong>RAG with vector databases</strong>, optimizing retrieval and content accuracy.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "The British University in Egypt",
+        timeframe: "2023",
+        role: "Capstone Project - Google's FER-2013 Dataset Challenge",
+        achievements: [
+          <>
+            Achieved <strong>83% accuracy</strong> in Google's Facial Expression Recognition challenge, 
+            representing an <strong>11% improvement</strong> over the benchmark (72.3%).
+          </>,
+          <>
+            Conducted comprehensive benchmark analysis and applied data-centric methods with 
+            outlier removal to improve dataset quality.
+          </>,
+          <>
+            Developed novel single-network architecture using advanced Computer Vision and 
+            Deep Learning techniques, earning <strong>Distinction (A+)</strong> and international recognition.
           </>,
         ],
         images: [],
@@ -152,78 +166,110 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "The British University in Egypt",
+        description: <>Bachelor of Science in Artificial Intelligence (Dual Degree with London South Bank University, UK) • Second Class Honours (1st Division) • 2019-2023</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Coursera & Professional Development",
+        description: <>Deep Learning Specialization, Google Data Analytics Professional Certificate, Data Analysis Challenger Track (Ministry of Communications and IT, Egypt)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Technical Skills",
     skills: [
       {
-        title: "Figma",
+        title: "Machine Learning & AI",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Deep expertise in supervised/unsupervised learning, CNNs, LSTMs, Transformers, Computer Vision, and NLP. 
+          Experienced with modern AI models including GPT-3.5/4, BERT, LLaMA, and RAG implementations.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Python",
+            icon: "python",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "TensorFlow",
+            icon: "tensorflow",
+          },
+          {
+            name: "PyTorch",
+            icon: "pytorch",
           },
         ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Data Engineering & Analytics",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Architecting scalable ETL pipelines with Apache NiFi, building real-time analytics dashboards, 
+          and implementing data warehousing solutions. Expert in data cleaning, wrangling, and visualization.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "SQL",
+            icon: "database",
+          },
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "R",
+            icon: "r",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Full-Stack Development",
+        description: (
+          <>Building modern web applications with React, Next.js, Node.js, and TypeScript. 
+          Experience with cloud platforms (Azure, AWS) and database technologies (PostgreSQL, MongoDB).</>
+        ),
+        tags: [
+          {
+            name: "React",
+            icon: "react",
           },
           {
             name: "Next.js",
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "TypeScript",
+            icon: "typescript",
           },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Node.js",
+            icon: "nodejs",
           },
         ],
-      },  
+        images: [],
+      },
+      {
+        title: "AI Frameworks & Tools",
+        description: (
+          <>Working with cutting-edge AI frameworks including LangChain, LlamaIndex, Ollama for building 
+          intelligent agents and conversational AI systems. Experience with vector databases and RAG implementations.</>
+        ),
+        tags: [
+          {
+            name: "LangChain",
+            icon: "link",
+          },
+          {
+            name: "OpenAI",
+            icon: "openai",
+          },
+        ],
+        images: [],
+      },
     ],
   },
 };
@@ -241,60 +287,11 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
+  description: `AI and Machine Learning projects by ${person.name}`,
+  // Create new project pages by adding a new .mdx file to app/work/projects
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+
+export { person, social, newsletter, home, about, blog, work };
