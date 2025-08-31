@@ -12,6 +12,7 @@ import {
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
   HiOutlineRocketLaunch,
+  HiOutlinePhone,
 } from "react-icons/hi2";
 
 import {
@@ -41,6 +42,7 @@ export const iconLibrary: Record<string, IconType> = {
   book: PiBookBookmarkDuotone,
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
+  phone: HiOutlinePhone,
   home: PiHouseDuotone,
   gallery: PiImageDuotone,
   discord: FaDiscord,

@@ -36,6 +36,11 @@ const social: Social = [
     icon: "email",
     link: `mailto:${person.email}`,
   },
+  {
+    name: "Phone",
+    icon: "phone",
+    link: "tel:+20-122-8548-712",
+  },
 ];
 
 const home: Home = {
