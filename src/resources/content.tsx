@@ -14,7 +14,7 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}&apos;s Newsletter</>,
   description: <>Updates about AI, data science, and engineering insights</>,
 };
 
@@ -65,7 +65,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Mohammed, an AI Engineer and Data Scientist from Cairo, Egypt.
+      I&apos;m Mohammed, an AI Engineer and Data Scientist from Cairo, Egypt.
       <br /> I specialize in building intelligent systems, ETL pipelines, and ML solutions 
       that turn complex data into actionable insights.
     </>
@@ -98,7 +98,7 @@ const about: About = {
         healthcare AI, and the development of data-driven systems that create real-world impact.
         <br /><br />
         With expertise in agentic AI frameworks, ETL pipeline architecture, and feature extraction techniques,
-        Mohammed approaches problems with a "figure it out" mindset - combining research, experimentation, 
+        Mohammed approaches problems with a &quot;figure it out&quot; mindset - combining research, experimentation, 
         and creative problem-solving to deliver sustainable solutions.
       </>
     ),
@@ -153,7 +153,7 @@ const about: About = {
         role: "Capstone Project - Google's FER-2013 Dataset Challenge",
         achievements: [
           <>
-            Achieved <strong>83% accuracy</strong> in Google's Facial Expression Recognition challenge, 
+            Achieved <strong>83% accuracy</strong> in Google&apos;s Facial Expression Recognition challenge, 
             representing an <strong>11% improvement</strong> over the benchmark (72.3%).
           </>,
           <>
