@@ -84,8 +84,9 @@ export default function About() {
         {about.avatar.display && (
           <Column
             className={styles.avatar}
+            position="sticky"
             minWidth="160"
-            paddingX="l"
+            paddingX="1"
             paddingBottom="xl"
             gap="m"
             flex={3}
